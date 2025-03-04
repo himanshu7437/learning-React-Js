@@ -1,4 +1,5 @@
 import { StrictMode } from 'react'
+import React from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 
@@ -12,10 +13,30 @@ function MyApp() {
   )
 }
 
+// our custom reactElement --> it will not work because the react is expecting some specific properties that we dont know.
+// const reactElement = {
+//   type: 'a',
+//   props: {
+//       href: 'https://google.com',
+//       target: '_blank'
+//   },
+//   children: 'Click me to visit google.'
+// }
+
+// secondElement 
+const secondElement = (
+  <a href="https://google.com">Visit google</a>
+)
+
+// create using react create element
+const reactElement = React.createElement(
+  'a',
+  {href: 'https://google.com', target: '_blank'},
+  'Click me to visit Google'
+)
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    {/* using that function */}
-    <MyApp /> 
-  </StrictMode>,
+  
+  reactElement
+
 )
