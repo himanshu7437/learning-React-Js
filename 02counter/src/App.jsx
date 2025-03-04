@@ -10,24 +10,29 @@ function App() {
 
 
   const addvalue = () => {
-    counter = counter + 1
+    if(counter<20) {
+      counter+=1
+    }
     iAmSetcounter(counter)
   }
 
   const decreaseValue = () => {
     console.log("clicked", counter) // just to check counter on console
     // counter = counter - 1
-    iAmSetcounter(counter - 1) // we can also do this.
+    if(counter>0) {
+      counter -= 1
+    }
+    iAmSetcounter(counter) // we can also do this.
   }
 
   return (
     <>
       <h1>Chai aur Code</h1>
+      <p>It has a limit of 0 to 20.</p>
       <h2>Counter Value : {counter}</h2>
 
       <button onClick={addvalue}
       >Add Value </button>
-      <br />
       <br />
       <button onClick={decreaseValue}
       >Decrease Value </button>
