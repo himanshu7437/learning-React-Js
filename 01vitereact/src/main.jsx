@@ -28,11 +28,15 @@ const secondElement = (
   <a href="https://google.com">Visit google</a>
 )
 
+// a global variable --> used in reactElement
+const newElement = "Chai aur Code"
+
 // create using react create element
 const reactElement = React.createElement(
   'a',
   {href: 'https://google.com', target: '_blank'},
-  'Click me to visit Google'
+  'Click me to visit Google',
+  newElement
 )
 
 createRoot(document.getElementById('root')).render(
