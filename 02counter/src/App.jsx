@@ -11,9 +11,16 @@ function App() {
 
   const addvalue = () => {
     if(counter<20) {
-      counter+=1
+      // ❌ The following lines won't increment by 3 because React batches similar state updates:
+      // iAmSetcounter(counter + 1);
+      // iAmSetcounter(counter + 1);
+      // iAmSetcounter(counter + 1);
+
+      // ✅ Correct way: Using the previous state ensures all updates are counted:
+      iAmSetcounter(prevCounter => prevCounter + 1);
+      iAmSetcounter(prevCounter => prevCounter + 1);
+      iAmSetcounter(prevCounter => prevCounter + 1);
     }
-    iAmSetcounter(counter)
   }
 
   const decreaseValue = () => {
