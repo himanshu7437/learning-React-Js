@@ -1,6 +1,3 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Buttons from './components/Buttons'
 
@@ -8,7 +5,7 @@ function App() {
 
   return (
     <>
-      <div className="box flex gap-3 bg-gray-400 p-3 rounded-2xl" 
+      <div className="flex gap-3 p-3 bg-gray-400 box rounded-2xl" 
       style={{
         // here we can write inline css
       }}>
