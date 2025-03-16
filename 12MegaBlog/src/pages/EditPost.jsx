@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {Container, PostForm} from '../components'
 import appwriteService from '../appwrite/config'
-import {useParams, useNavigate} from 'react-dom'
-import { set } from 'react-hook-form'
+import {useParams, useNavigate} from 'react-router'
 
 
 function EditPost() {
