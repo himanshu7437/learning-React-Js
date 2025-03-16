@@ -5,7 +5,6 @@ import {login} from '../store/authSlice'
 import {Button, Input, Logo} from './index'
 import { useDispatch } from 'react-redux'
 import { useForm } from 'react-hook-form'
-import { current } from '@reduxjs/toolkit'
 
 
 function Signup() {
