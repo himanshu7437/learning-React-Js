@@ -86,8 +86,11 @@ export class Service{
                 queries,
             )
         } catch (error) {
-            console.log("Appwrite service :: getPosts :: error", error);
-            return false;
+            if (error.message.includes("The current user is not authorized to perform the requested action")) {
+                return null;
+            }
+            console.error("Appwrite service :: getPosts :: error", error);
+            return null;
         }
     }
 
